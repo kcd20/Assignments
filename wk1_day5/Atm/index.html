@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <h1>ATM Machine</h1>
+    <form>
+        <label>Enter PIN Number:</label>
+        <input type="text" id="pin" name="pin">
+        <button type="button" id="chkPin" onclick="checkPin()">Enter PIN</button>
+        <p id="pinResult"></p>
+
+        <div id="options" style="display:none">
+            <button type="button" onclick="options(this.value)" value=1>Check Balance</button>
+            <button type="button" onclick="options(this.value)" value=2>Withdraw Cash</button>
+            <button type="button" onclick="options(this.value)" value=3>Change PIN</button>
+        </div>
+
+
+        <div id="withdraw" style="display:none">
+            <label></br> Please Enter Amount:</label>
+            <input type="text" id="withdrawAmount" name="withdrawAmount"  value="" />
+            <button type="button" onclick="withdraw()">Withdraw</button>
+        </div>
+
+        <div id="changePin" style="display:none">
+            <label></br>Enter New Pin:</label>
+            <input type="text" id="newPin" name="newPin"  value="" />
+
+            <button type="button" onclick="changePin()">Change Pin</button>
+        </div>
+
+        <div>
+            <p id="display1"></p>
+            <p id="display2"></p>
+        </div>
+
+        <div id="logout" style="display:none">
+            <button type="button" onclick="logoutAcc()" >Logout</button>
+        </div>
+    </form>
+    <script src="./js/atm.js"></script>
+</body>
+
+</html>
